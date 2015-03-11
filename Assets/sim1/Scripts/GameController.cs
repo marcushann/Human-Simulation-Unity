@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour {
 		if((Time.realtimeSinceStartup - lastSpawn > spawnRate) && GameObject.FindGameObjectsWithTag("simulated").Length < maxSimulated){
 			Debug.Log ("spawning new");
 			//Spawn new sim object
-			Vector3 position = new Vector3(Random.Range (-spawnLocations.x, spawnLocations.x), Random.Range (-spawnLocations.y, spawnLocations.y), 0);
+			Vector3 position = new Vector3(Random.Range (-spawnLocations.x, spawnLocations.x), 0, Random.Range (-spawnLocations.z, spawnLocations.z));
 			Quaternion rotation = Quaternion.identity;
 			spawnItem.GetComponent<humanSimulator>().home = home;
 			spawnItem.GetComponent<humanSimulator>().workPlace = work;
