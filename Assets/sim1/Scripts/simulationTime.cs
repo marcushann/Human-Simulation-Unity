@@ -9,6 +9,7 @@ public class simulationTime : MonoBehaviour {
 	private static float Seconds = 0;
 	private static float Minutes = 0;
 	private static float Hours = 0;
+	private static int Days;
 	private static simulationTime instance = null;
 	private static readonly object padlock = new object();
 
@@ -47,9 +48,14 @@ public class simulationTime : MonoBehaviour {
 			Hours = 0;
 			Minutes = 0;
 			Seconds = 0;
+			addDay ();
 		} else {
-			Hours += 1;
+			Hours++;
 		}
+	}
+
+	void addDay(){
+		Days++;
 	}
 	#endregion
 
@@ -65,5 +71,10 @@ public class simulationTime : MonoBehaviour {
 	public int getHour(){
 		return Convert.ToInt32(Hours);
 	}
+
+	public int getDay(){
+		return Days;
+	}
+
 	#endregion
 }

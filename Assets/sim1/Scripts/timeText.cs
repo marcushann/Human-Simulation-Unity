@@ -11,6 +11,6 @@ public class timeText : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		gameObject.GetComponent<UnityEngine.UI.Text>().text = current.getHour().ToString() + ":" + current.getMinute().ToString() + ":" + current.getSecond().ToString();
+		gameObject.GetComponent<UnityEngine.UI.Text>().text = "Day: " + current.getDay().ToString() + " Time: " + current.getHour().ToString() + ":" + current.getMinute().ToString() + ":" + current.getSecond().ToString();
 	}
 }
